@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html ng-app="CalculatorApp">
+
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Calculator App</title>
+    <body>
+        <div ng-controller="CalculatorController">
+            <div class="container-fluid col-sm-4 col-sm-offset-4">
+                <div class="row-fluid">
+                    <div class="col-xs-12 screen">
+                        {{ result }}
+                    </div>
+                </div>
+
+                <div class="row-fluid">
+                    <div class="col-xs-3 center">
+                        <button class="btn" ng-click="clearExp()">
+                            AC
+                        </button>
+                    </div>
+                    <div class="col-xs-3 center">
+                        <button class="btn" ng-click="clearEntry()">
+                            CE
+                        </button>
+                    </div>
+                    <div class="col-xs-3 center">
+                        <button class="btn" ng-click="toggleSign()">
+                            +/-
+                        </button>
+                    </div>
+
+                    <div class="col-xs-3 center">
+                        <button class="btn" ng-click="evalExp()">
+                            =
+                        </button>
+                    </div>
+                </div>
+
+                <div class="row-fluid">
+                    <div class="col-xs-3 center">
+                        <button class="btn" ng-click="appendExp('7')">
+                            7
+                        </button>
+                    </div>
+                    <div class="col-xs-3 center">
+                        <button class="btn" ng-click="appendExp('8')">
+                            8
+                        </button>
+                    </div>
+                    <div class="col-xs-3 center">
+                        <button class="btn" ng-click="appendExp('9')">
+                            9
+                        </button>
+                    </div>
+                    <div class="col-xs-3 center">
+                        <button class="btn" ng-click="appendExp('+')">
+                            +
+                        </button>
+                    </div>
+                </div>
+
+                <div class="row-fluid">
+                    <div class="col-xs-3 center">
+                        <button class="btn" ng-click="appendExp('4')">
+                            4
+                        </button>
+                    </div>
+                    <div class="col-xs-3 center">
+                        <button class="btn" ng-click="appendExp('5')">
+                            5
+                        </button>
+                    </div>
+                    <div class="col-xs-3 center">
+                        <button class="btn" ng-click="appendExp('6')">
+                            6
+                        </button>
+                    </div>
+                    <div class="col-xs-3 center">
+                        <button class="btn" ng-click="appendExp('-')">
+                            -
+                        </button>
+                    </div>
+                </div>
+
+                <div class="row-fluid">
+                    <div class="col-xs-3 center">
+                        <button class="btn" ng-click="appendExp('1')">
+                            1
+                        </button>
+                    </div>
+                    <div class="col-xs-3 center">
+                        <button class="btn" ng-click="appendExp('2')">
+                            2
+                        </button>
+                    </div>
+                    <div class="col-xs-3 center">
+                        <button class="btn" ng-click="appendExp('3')">
+                            3
+                        </button>
+                    </div>
+                    <div class="col-xs-3 center">
+                        <button class="btn" ng-click="appendExp('*')">
+                            *
+                        </button>
+                    </div>
+                </div>
+
+                <div class="row-fluid">
+                    <div class="zero">
+                        <div class="col-xs-6 center">
+                            <button class="btn" ng-click="appendExp('0')">
+                                0
+                            </button>
+                        </div>
+                        <div class="col-xs-3 center">
+                            <button class="btn" ng-click="appendExp('.')">
+                                .
+                            </button>
+                        </div>
+                        <div class="col-xs-3 center">
+                            <button class="btn" ng-click="appendExp('/')">
+                                /
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.1/angular.min.js"></script>
+        <script src="app.js"></script>
+    </body>
+
+</html>
